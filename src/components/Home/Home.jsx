@@ -14,13 +14,13 @@ function Home() {
           <h1>Martin Ševčík</h1>
           <h3>Software developer | Data scientist</h3>
           <div>
-            <a href="google.com">
+            <a href="https://github.com/prixedox">
               <img src={githubIcon} alt="Github" width="32" height="32" />
             </a>
-            <a href="google.com">
+            <a href="https://www.linkedin.com/in/martin-%C5%A1ev%C4%8D%C3%ADk-947105167/">
               <img src={linkedinIcon} alt="Linkedin" width="32" height="32" />
             </a>
-            <a href="google.com">
+            {/* <a href="google.com">
               <img src={facebookIcon} alt="Facebook" width="32" height="32" />
             </a>
             <a href="google.com">
@@ -28,7 +28,7 @@ function Home() {
             </a>
             <a href="google.com">
               <img src={youtubeIcon} alt="Youtube" width="32" height="32" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
