@@ -5,13 +5,11 @@ function PortfolioIMS() {
     <>
       <h3>Impregnation station</h3>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of
-        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.
+      The Development of a web application focused on managing recipes and user access for an impregnation station.
+      This project posed several challenges, including implementing Azure AD authentication, manual authorization processes,
+      creating a custom adapter for recipe management based on impregnation station manufacturers, and establishing communication
+      with other APIs, as well as utilizing MQTT and SignalR protocols.
+      The application was built using .NET and Angular technologies, ensuring a robust backend and a user-friendly interface.
       </p>
     </>
   );

@@ -5,13 +5,22 @@ function PortfolioPP() {
     <>
       <h3>Packaging proposal</h3>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of
-        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.
+      This project focused on predicting the optimal packaging solution for a given set of items in an order.
+      The predictive analysis comprised two key components: historical packing data retrieved from a database
+      and AI-driven predictions based on item parameters.
+
+      The project involved the development of two distinct applications. The first application interfaced with
+      two databases to perform historical predictions. It periodically queried the database for new entries
+      lacking package information. If the item had been previously packed, it utilized historical data; otherwise,
+      it invoked the second application. This secondary application, developed in Python, utilized a K-Means machine
+      learning model to generate predictions based on item parameters such as weight and size.
+
+      Communication between the applications occurred over HTTP. Notably, the databases contained records of actual
+      package usage, facilitating a vision for future refinement through accumulating packed item combinations,
+      potentially reducing reliance on machine learning predictions.
+
+      The primary application was developed using .NET, ensuring robust functionality, while the Python-based second
+      application provided specialized predictive capabilities.
       </p>
     </>
   );
