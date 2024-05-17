@@ -13,10 +13,10 @@ function Portfolio() {
       <PortfolioTRC />
       <PortfolioIMS />
       <PortfolioPP />
-      <h2>Personal projects</h2>
+      {/* <h2>Personal projects</h2>
       <PortfolioSP1 />
       <PortfolioSP2 />
-      <PortfolioSP3 />
+      <PortfolioSP3 /> */}
     </>
   );
 }
