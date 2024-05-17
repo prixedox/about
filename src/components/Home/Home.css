@@ -1,12 +1,34 @@
 .wrapper {
     background-color: #dadada;
-    height:100vh;
+    background-image: url('/src/background.jpg');
+    background-size:cover;
+    height: calc(100vh - 5em);
+    color: #ffffff;
+}
+
+.overlay {
+    height:calc(100vh - 5em);
+    background-color: #005050aa;
 }
 
 .align-middle {
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
-    height: 100vh; /* Adjust the height of the container */
+    height: calc(100vh - 5em); /* Adjust the height of the container */
     flex-direction: column; /* Stack children vertically */
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom:0px;
+}
+
+.home-header {
+    font-size: 1.5em;
+    color: white;
+}
+
+img {
+    filter: invert(100%); 
 }

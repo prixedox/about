@@ -10,17 +10,18 @@ function Home() {
   return (
     <>
       <div className="wrapper">
-        <div className="align-middle">
-          <h1>Martin Ševčík</h1>
-          <h3>Software developer | Data scientist</h3>
-          <div>
-            <a href="https://github.com/prixedox">
-              <img src={githubIcon} alt="Github" width="64" height="64" />
-            </a>
-            <a href="https://www.linkedin.com/in/martin-%C5%A1ev%C4%8D%C3%ADk-947105167/">
-              <img src={linkedinIcon} alt="Linkedin" width="64" height="64" />
-            </a>
-            {/* <a href="google.com">
+        <div className="overlay">
+          <div className="align-middle">
+            <h1>Martin Ševčík</h1>
+            <h3 className="home-header">Software developer | Data scientist</h3>
+            <div>
+              <a href="https://github.com/prixedox">
+                <img src={githubIcon} alt="Github" width="64" height="64" />
+              </a>
+              <a href="https://www.linkedin.com/in/martin-%C5%A1ev%C4%8D%C3%ADk-947105167/">
+                <img src={linkedinIcon} alt="Linkedin" width="64" height="64" />
+              </a>
+              {/* <a href="google.com">
               <img src={facebookIcon} alt="Facebook" width="32" height="32" />
             </a>
             <a href="google.com">
@@ -29,6 +30,7 @@ function Home() {
             <a href="google.com">
               <img src={youtubeIcon} alt="Youtube" width="32" height="32" />
             </a> */}
+            </div>
           </div>
         </div>
       </div>
