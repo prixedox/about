@@ -11,7 +11,7 @@ function Home() {
     <>
       <div className="wrapper">
         <div className="overlay">
-          <div className="align-middle">
+          <div className="align-middle" id='home'>
             <h1>Martin Ševčík</h1>
             <h3 className="home-header">Software developer | Data scientist</h3>
             <div>

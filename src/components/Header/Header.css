@@ -1,3 +1,65 @@
 .header {
+    position: fixed;
     height: 5em;
+    background-color: #091833;
+    width: 100%;
+    display: flex;
+    box-shadow: 0 3px 15px #711c91;
+}
+
+.header-wrapper {
+    position: relative;
+    z-index: 9999;
+    
+}
+
+.buttons-div {
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block
+}
+
+ul.menu-list {
+    display: flex; /* Makes the list items go from left to right */
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    height: 5em;
+}
+
+li.menu-item {
+    margin: 0 1em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+}
+
+li.main-item {
+    margin-right: 25em;
+    margin-left: 10em;
+}
+
+a.button-link {
+    display: inline-block;
+    color: #ea00d9;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+a.button-link:hover {
+    color: #ddd; /* Optional: Adds a hover effect */
+}
+
+a.main-link {
+    font-size: 1.5em;
+    color:#ddd
+}
+
+a.main-link:hover {
+    color: #ea00d9
 }

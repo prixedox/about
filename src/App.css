@@ -6,3 +6,12 @@ body {
 h3, h2 {
     color : #ea00d9 /* #711c91, #ea00d9 */
 }
+
+section {
+    height:100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 5em;
+}

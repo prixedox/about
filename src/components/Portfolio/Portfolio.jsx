@@ -9,14 +9,16 @@ import PortfolioSP3 from './PortfolioSP3';
 function Portfolio() {
   return (
     <>
-      <h2>Job projects</h2>
-      <PortfolioTRC />
-      <PortfolioIMS />
-      <PortfolioPP />
-      {/* <h2>Personal projects</h2>
+      <section id='portfolio'>
+        <h2>Job projects</h2>
+        <PortfolioTRC />
+        <PortfolioIMS />
+        <PortfolioPP />
+        {/* <h2>Personal projects</h2>
       <PortfolioSP1 />
       <PortfolioSP2 />
       <PortfolioSP3 /> */}
+      </section>
     </>
   );
 }

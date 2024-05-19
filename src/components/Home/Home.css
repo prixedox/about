@@ -2,12 +2,12 @@
     background-color: #dadada;
     background-image: url('/src/background.jpg');
     background-size:cover;
-    height: calc(100vh - 5em);
+    height: 100vh;
     color: #ffffff;
 }
 
 .overlay {
-    height:calc(100vh - 5em);
+    height:100vh;
     background-color: #005050aa;
 }
 
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
-    height: calc(100vh - 5em); /* Adjust the height of the container */
+    height: 100vh; /* Adjust the height of the container */
     flex-direction: column; /* Stack children vertically */
 }
 
