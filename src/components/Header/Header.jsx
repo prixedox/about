@@ -4,7 +4,7 @@ import './Header.css';
 const easeInOutQuint = (t) => t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2;
 
 const smoothScroll = (target, duration) => {
-  const start = window.pageYOffset;
+  const start = window.scrollY;
   const scrollPadding = 6 * parseFloat(getComputedStyle(document.documentElement).fontSize);
   const targetElement = document.querySelector(target);
 
