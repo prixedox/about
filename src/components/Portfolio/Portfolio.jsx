@@ -10,10 +10,12 @@ function Portfolio() {
   return (
     <>
       <section id='portfolio'>
-        <h2>Job projects</h2>
+        <h2 className='text-center'>Job projects</h2>
+        <div className='container'>
         <PortfolioTRC />
         <PortfolioIMS />
         <PortfolioPP />
+        </div>
         {/* <h2>Personal projects</h2>
       <PortfolioSP1 />
       <PortfolioSP2 />
