@@ -3,7 +3,7 @@ import React from 'react';
 function PortfolioIMS() {
   return (
     <>
-      <h3>Impregnation station</h3>
+      <h3 className='mt-5'>Impregnation station</h3>
       <p>
       The Development of a web application focused on managing recipes and user access for an impregnation station.
       This project introduces several challenges, including implementing Azure AD authentication, manual authorization processes,

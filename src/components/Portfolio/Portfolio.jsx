@@ -10,7 +10,7 @@ function Portfolio() {
   return (
     <>
       <section id='portfolio'>
-        <h2 className='text-center'>Job projects</h2>
+        <h2 className='text-center m-5'>Job projects</h2>
         <div className='container'>
         <PortfolioTRC />
         <PortfolioIMS />

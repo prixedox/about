@@ -5,7 +5,7 @@ function Education() {
   return (
     <>
       <section id="education">
-        <h2 className="text-center">Education</h2>
+        <h2 className="text-center m-5">Education</h2>
         <div className="container">
           <div class="row">
             <div class="col">

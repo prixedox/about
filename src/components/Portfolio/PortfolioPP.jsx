@@ -3,7 +3,7 @@ import React from 'react';
 function PortfolioPP() {
   return (
     <>
-      <h3>Packaging proposal</h3>
+      <h3 className='mt-5'>Packaging proposal</h3>
       <p>
       This project focused on predicting the optimal packaging solution for a given set of items in an order.
       The predictive analysis comprised two key components: historical packing data retrieved from a database

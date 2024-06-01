@@ -4,7 +4,7 @@ function Skills() {
   return (
     <>
       <section id="skills">
-        <h2 className="text-center">Skills</h2>
+        <h2 className="text-center m-5">Skills</h2>
         <div className="container">
           <table className="table">
             <tr>
