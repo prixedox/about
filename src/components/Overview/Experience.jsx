@@ -8,6 +8,7 @@ function Experience() {
         <div className='vertical-line'></div>
         <div className='header-center'>
           <h2>Experience</h2>
+          <button className='btn btn-primary'>abc</button>
         </div>
         <div className='vertical-list'>
           <div className='horizontal-triplet'>

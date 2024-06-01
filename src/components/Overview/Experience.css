@@ -23,8 +23,8 @@
 
 .vertical-line {
     position:absolute;
-    top: 50%;
-    left: 45%;
+    top: 210%;
+    left: 50%;
     height:200px;
     border: 1px solid white;
 }
