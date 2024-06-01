@@ -1,0 +1,35 @@
+ .horizontal-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: Adjust the spacing between the divs */
+ }
+
+ .horizontal-item {
+    margin-left: 5px;
+    text-align: left;
+    /* Center the text vertically */
+ }
+
+ .header-center {
+    text-align: center;
+ }
+
+ .timeline-horizontal-group {
+    display: flex;
+    align-items: center;
+ }
+
+ .timeline-horizontal-line {
+    display: inline-block;
+    height: 1px;
+    width: 25em;
+    background-color: #ffffff;
+ }
+
+ .square {
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #ea00d9;
+ }
