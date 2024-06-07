@@ -3,14 +3,18 @@ import Education from './Education'
 import Experience from './Experience';
 import Skills from './Skills';
 import Portfolio from '../Portfolio/Portfolio'
+import './Overview.css';
 
 function Overview() {
   return (
     <>
       <div>
         <Education />
+        <hr />
         <Experience />
+        <hr />
         <Skills />
+        <hr />
         <Portfolio />
       </div>
     </>

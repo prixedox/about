@@ -6,6 +6,7 @@ function Education() {
     <>
       <section id="education">
         <h2 className="text-center m-5">Education</h2>
+        <div className="vh25"></div>
         <div className="container">
           <div class="row">
             <div class="col">
