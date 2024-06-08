@@ -7,38 +7,48 @@ function Experience() {
       <section id="experience">
         <h2 className="text-center m-5">Experience</h2>
         <div className="container">
-          <div className="row m-5 vh25">
-            <div className="col">
-              Software Developer, Siemens s.r.o. / Innomotics s.r.o. August 2022
-              - Present
+          <div>
+            <div className="row">
+              <div className="col companyPositionText">
+                <p>Siemens s.r.o. / Innomotics s.r.o.</p>
+                <p className="ms-3">Software Developer</p>
+              </div>
+              <div className="col dateText">August 2022 - Present</div>
             </div>
-            <div className="col vh-50">
-              <li>Creating solutions based on factory requirements</li>
-              <li>Full-stack web development (Angular/C#/Python/SQL)</li>
-              <li>
+            <div className="ms-5 mt-2 mb-5">
+              <p>Creating solutions based on factory requirements</p>
+              <p>Full-stack web development (Angular/C#/Python/SQL)</p>
+              <p>
                 Data collection, data cleaning, machine learning, visualization
                 in a web app
-              </li>
+              </p>
             </div>
           </div>
-          <div className="row m-5 vh25">
-            <div className="col">
-              Full-stack developer, ArcelorMittal Ostrava a.s. / Liberty Ostrava
-              a.s. February 2019 - July 2022
+          <div>
+            <div className="row">
+              <div className="col companyPositionText">
+                <p>ArcelorMittal Ostrava a.s. / Liberty Ostrava a.s.</p>
+                <p className="ms-3">Full-stack developer</p>
+              </div>
+              <div className="col dateText">February 2019 - July 2022</div>
             </div>
-            <div className="col">
-              <li>New web application creation</li>
-              <li>Front-end modernization of old existing website</li>
-              <li>Management of full-stack website changes</li>
+            <div className="ms-5 mt-2 mb-5">
+              <p>New web application creation</p>
+              <p>Front-end modernization of old existing website</p>
+              <p>Management of full-stack website changes</p>
             </div>
           </div>
-          <div className="row m-5 vh25">
-            <div className="col">
-              Data analyst, IDC CEMA s.r.o. September 2021 - December 2021
+          <div>
+            <div className="row">
+              <div className="col companyPositionText">
+                <p>IDC CEMA s.r.o.</p>
+                <p className="ms-3">Data analyst</p>
+              </div>
+              <div className="col dateText">September 2021 - December 2021</div>
             </div>
-            <div className="col">
-              <li>Web scraping information about eshop products</li>
-              <li>Subsequent automatization and computation</li>
+            <div className="ms-5 mt-2 mb-5 vh25">
+              <p>Web scraping information about eshop products</p>
+              <p>Subsequent automatization and computation</p>
             </div>
           </div>
         </div>

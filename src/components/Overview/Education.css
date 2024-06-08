@@ -33,3 +33,7 @@
     height: 10px;
     background-color: #ea00d9;
  }
+
+section#education {
+   min-height: 20px;
+}

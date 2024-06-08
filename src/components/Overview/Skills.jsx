@@ -18,7 +18,7 @@ function Skills() {
         <div className="container text-white">
           <div className="row">
             <div className="col-6">
-              <div className="h5 mt-4">Languages/Frameworks</div>
+              <div className="h5 mt-4">Languages</div>
               <div className="mb-4">
                 Python
                 <ProgressBar value="90" />
@@ -75,7 +75,7 @@ function Skills() {
               </div>
             </div>
             <div className="col-6">
-              <div className="h5 mt-4">Python libraries</div>
+              <div className="h5 mt-4">Python libs</div>
               <div className="mb-4">
                 Numpy
                 <ProgressBar value="85" />

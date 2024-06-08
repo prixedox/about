@@ -1,34 +1,41 @@
 .wrapper {
-    background-color: #dadada;
-    background-image: url('/src/background.jpg');
-    background-size:cover;
-    height: 100vh;
-    color: #ffffff;
+  background-color: #dadada;
+  background-image: url("/src/background.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
 }
 
 .overlay {
-    height:100vh;
-    background-color: #005050aa;
+  height: 100vh;
+  background-color: #005050aa;
 }
 
-.align-middle {
-    display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    height: 100vh; /* Adjust the height of the container */
-    flex-direction: column; /* Stack children vertically */
+.center-container {
+    height: 100vh;
+}
+
+.heading-wrapper {
+    text-align: center;
 }
 
 h1 {
-    font-size: 5em;
-    margin-bottom:0px;
-}
-
-.home-header {
-    font-size: 1.5em;
-    color: white;
+  font-size: 5em;
+  margin-bottom: 0px;
 }
 
 img {
-    filter: invert(100%); 
+  filter: invert(100%);
+}
+
+.blueText {
+  color: #0abdc6;
+}
+
+.pinkText {
+  color: #ea00d9;
+}
+
+.whiteText {
+    color: white;
 }

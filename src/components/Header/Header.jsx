@@ -5,7 +5,7 @@ const easeInOutQuint = (t) => t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2
 
 const smoothScroll = (target, duration) => {
   const start = window.scrollY;
-  const scrollPadding = 6 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const scrollPadding = 7 * parseFloat(getComputedStyle(document.documentElement).fontSize);
   const targetElement = document.querySelector(target);
 
   let end = targetElement.offsetTop - scrollPadding;
