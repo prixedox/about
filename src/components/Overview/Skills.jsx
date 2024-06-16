@@ -17,7 +17,7 @@ function Skills() {
         <h2 className="text-center m-5">Skills</h2>
         <div className="container text-white">
           <div className="row">
-            <div className="col-6">
+            <div className="col-md-6">
               <div className="h5 mt-4">Languages</div>
               <div className="mb-4">
                 Python
@@ -36,7 +36,7 @@ function Skills() {
                 <ProgressBar value="51" />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
               <div className="h5 mt-4">DevOps</div>
               <div className="mb-4">
                 Git
@@ -55,7 +55,7 @@ function Skills() {
                 <ProgressBar value="65" />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
               <div className="h5 mt-4">Data</div>
               <div className="mb-4">
                 SQL
@@ -74,7 +74,7 @@ function Skills() {
                 <ProgressBar value="70" />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
               <div className="h5 mt-4">Python libs</div>
               <div className="mb-4">
                 Numpy
