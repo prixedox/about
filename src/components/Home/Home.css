@@ -12,11 +12,11 @@
 }
 
 .center-container {
-    height: 100vh;
+  height: 100vh;
 }
 
 .heading-wrapper {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
@@ -37,5 +37,20 @@ img {
 }
 
 .whiteText {
-    color: white;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .separator {
+    display: none;
+  }
+  .mobile-line-break {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-line-break {
+    display: none;
+  }
 }
