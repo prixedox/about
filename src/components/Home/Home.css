@@ -1,18 +1,21 @@
 .wrapper {
-  background-color: #dadada;
-  background-image: url("/src/background.jpg");
-  background-size: cover;
+  /* background-image: url("/src/background.jpg");
+  background-size: cover; */
   height: 100vh;
   color: #ffffff;
+  background: linear-gradient(180deg, #ea00d9, #185a79, #0b2d44);
 }
 
 .overlay {
   height: 100vh;
-  background-color: #005050aa;
+  /* background-color: #005050aa; */
+  
 }
 
 .center-container {
-  height: 100vh;
+  /* height: 100vh; */
+  padding-top: 25vh;
+  
 }
 
 .heading-wrapper {

@@ -8,7 +8,8 @@ import './Overview.css';
 function Overview() {
   return (
     <>
-      <div>
+      <div className="overview">
+        <hr />
         <Education />
         <hr />
         <Experience />

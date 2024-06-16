@@ -1,7 +1,8 @@
 body {
     color: #0abdc6;
-    background-color: #091833;
     font-family: "Lucida Console", "Courier New", monospace;
+    background-size: cover;
+    height: 100%;
 }
 
 h3, h2 {

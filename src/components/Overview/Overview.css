@@ -1,3 +1,12 @@
 hr {
     color: white;
 }
+
+.overview {
+    background: linear-gradient(180deg, #0b2d44, #133c6e, #091833);
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 3em;
+}
