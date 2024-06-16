@@ -9,8 +9,6 @@
   color: #ddd;
   text-transform: uppercase;
   font-weight: bold;
-  margin-right: 25em;
-  margin-left: 10em;
 }
 
 .custom-brand:hover {
@@ -47,11 +45,11 @@
   background-color: #ea00d9;
 }
 
+.navbar-nav {
+  margin-right: 5em;
+}
+
 @media (max-width: 991px) {
-  .custom-brand {
-    margin-right: 0;
-    margin-left: 2em;
-  }
 
   .navbar-collapse {
     background-color: #091833;
