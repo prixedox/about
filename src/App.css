@@ -3,6 +3,7 @@ body {
     font-family: "Lucida Console", "Courier New", monospace;
     background-size: cover;
     height: 100%;
+    font-weight: 1000;
 }
 
 h3, h2 {
