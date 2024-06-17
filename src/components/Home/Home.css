@@ -27,7 +27,7 @@ h1 {
   margin-bottom: 0px;
 }
 
-img {
+.social-icon > img {
   filter: invert(100%);
 }
 
