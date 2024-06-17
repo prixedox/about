@@ -4,7 +4,7 @@ function PortfolioPP() {
   return (
     <>
       <h3 className='mt-5'>Packaging proposal</h3>
-      <p>
+      <p className='mb-0'>
       This project focused on predicting the optimal packaging solution for a given set of items in an order.
       The predictive analysis comprised two key components: historical packing data retrieved from a database
       and AI-driven predictions based on item parameters.
