@@ -108,6 +108,11 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
+          <li className="nav-item">
+              <a className="nav-link custom-link" href="#about">
+                About
+              </a>
+            </li>
             <li className="nav-item">
               <a className="nav-link custom-link" href="#education">
                 Education
