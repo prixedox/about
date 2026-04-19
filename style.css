@@ -87,6 +87,16 @@ a:hover { text-decoration: underline; }
     line-height: 1.5;
 }
 
+.availability {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+.availability .status-dot {
+    color: #10b981;
+    margin-right: 0.5rem;
+}
+
 /* Sections */
 .section { padding: 4rem 0; }
 .section-alt { background: var(--bg-alt); }
@@ -177,8 +187,8 @@ a:hover { text-decoration: underline; }
 /* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
 }
 
 .project {
@@ -190,6 +200,12 @@ a:hover { text-decoration: underline; }
 }
 
 .project:hover { border-color: var(--accent); }
+
+.project.placeholder {
+    border-style: dashed;
+    border-color: var(--text-muted);
+    opacity: 0.8;
+}
 
 .project h3 {
     font-size: 1.05rem;
@@ -205,6 +221,13 @@ a:hover { text-decoration: underline; }
     font-family: var(--mono);
     font-size: 0.75rem;
     color: var(--accent);
+}
+
+.project-link {
+    display: block;
+    margin-top: 0.75rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
 }
 
 /* Education */
@@ -266,7 +289,6 @@ a:hover { text-decoration: underline; }
     .subtitle { font-size: 0.85rem; }
     .section { padding: 3rem 0; }
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
-    .projects-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
