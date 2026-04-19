@@ -24,8 +24,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#stack">Stack</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <!-- <li><a href="#personal-projects">Personal</a></li> -->
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#personal-projects">Personal</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -36,6 +36,7 @@
         <div class="container">
             <h1>Martin Ševčík</h1>
             <p class="subtitle">Software Developer · .NET · Python · Azure · Pharma Data · AI-augmented workflows</p>
+            <p class="availability"><span class="status-dot">●</span>Available for new roles — remote or hybrid</p>
         </div>
     </header>
 
@@ -159,7 +160,7 @@
 
         <section id="projects" class="section section-alt">
             <div class="container">
-                <h2>Work Projects</h2>
+                <h2>Work</h2>
                 <div class="projects-grid">
                     <article class="project">
                         <h3>Pharma Export Ban Pipeline</h3>
@@ -181,41 +182,43 @@
                         <p>ML-powered optimal packaging prediction. Two-service architecture: .NET app handles business logic and UI, Python service runs K-Means clustering on item parameters (weight, dimensions) via HTTP API.</p>
                         <span class="project-stack">.NET · Python · scikit-learn · K-Means</span>
                     </article>
+                    <article class="project">
+                        <h3>Stock Watchdog</h3>
+                        <p>Availability watcher for pharmacy supplier e-shops. Scrapes stock status across suppliers, detects unavailable→available transitions, and pushes instant email notifications via Microsoft Graph so buyers can act before high-demand items sell out.</p>
+                        <span class="project-stack">Python · Microsoft Graph · Docker</span>
+                    </article>
+                    <article class="project">
+                        <h3>Pan-EU Drug Data Hub</h3>
+                        <p>Cross-border pharma data integration — merges drug registry and pricing data from national sources (currently CZ + SK, expanding EU-wide) into a unified MSSQL warehouse to enable easier intra-EU trading. .NET / EF Core services handle ingestion and the DevExpress UI; Python workers perform country-specific normalization; Azure-hosted.</p>
+                        <span class="project-stack">.NET · EF Core · DevExpress · Python · MSSQL · Azure · Docker</span>
+                    </article>
                 </div>
             </div>
         </section>
-
-        <!--
-        TO ACTIVATE PERSONAL PROJECTS:
-        1. Uncomment the <li> in the nav above (the Personal entry).
-        2. Uncomment this <section id="personal-projects"> block.
-        3. Rename "Work Projects" heading to "Work" and the nav "Projects" label to "Work"
-           so the nav reads Work / Personal.
-        4. Replace the 3 placeholder cards with real content.
 
         <section id="personal-projects" class="section">
             <div class="container">
-                <h2>Personal Projects</h2>
+                <h2>Personal</h2>
                 <div class="projects-grid">
                     <article class="project">
-                        <h3>PROJECT_NAME</h3>
-                        <p>DESCRIPTION — what it does, one architectural detail, one outcome.</p>
-                        <span class="project-stack">TECH · STACK · HERE</span>
+                        <h3>Vzdělej.se</h3>
+                        <p>Czech interactive learning platform for math and physics. Lessons are built as step sequences mixing multiple-choice, drag-to-sort, text-input, and custom interactive visualizations (function graphs, physics simulations) so students learn by exploring rather than reading.</p>
+                        <span class="project-stack">Next.js 16 · React 19 · TypeScript · Tailwind · shadcn/ui · KaTeX</span>
+                        <a class="project-link" href="https://github.com/prixedox/vzdelej-se" target="_blank" rel="noopener">github.com/prixedox/vzdelej-se →</a>
                     </article>
-                    <article class="project">
-                        <h3>PROJECT_NAME</h3>
-                        <p>DESCRIPTION — what it does, one architectural detail, one outcome.</p>
-                        <span class="project-stack">TECH · STACK · HERE</span>
+                    <article class="project placeholder">
+                        <h3>DeepWork</h3>
+                        <p>Public focus-session tracker — API that logs deep-work sessions, tracks streaks, and exposes weekly and monthly analytics. Real auth flow, rate limiting, full OpenTelemetry tracing, and a public Grafana dashboard showing live request latency and error rates. Dockerized and deployed to Azure via CI/CD.</p>
+                        <span class="project-stack">.NET · Postgres · OpenTelemetry · Grafana · Azure Container Apps · Docker · GitHub Actions</span>
                     </article>
-                    <article class="project">
-                        <h3>PROJECT_NAME</h3>
-                        <p>DESCRIPTION — what it does, one architectural detail, one outcome.</p>
-                        <span class="project-stack">TECH · STACK · HERE</span>
+                    <article class="project placeholder">
+                        <h3>Personal Life OS</h3>
+                        <p>AI agent with deep memory over my own data — notes, calendar, workouts, reading, habits. Local-first: private vector store, self-hosted, no third-party data sharing. Exposed as an MCP server so Claude Code can query it natively. Every agent run is traced — token cost, latency, and eval scores against a curated question set tracked over time.</p>
+                        <span class="project-stack">Python · Claude API · MCP SDK · pgvector · FastAPI · OpenTelemetry · Docker</span>
                     </article>
                 </div>
             </div>
         </section>
-        -->
 
         <section id="education" class="section">
             <div class="container">
@@ -237,9 +240,9 @@
             <div class="container">
                 <h2>Contact</h2>
                 <div class="contact-links">
+                    <a href="mailto:prixedox@gmail.com">Email</a>
                     <a href="https://github.com/prixedox" target="_blank" rel="noopener">GitHub</a>
                     <a href="https://www.linkedin.com/in/martin-%C5%A1ev%C4%8D%C3%ADk-947105167/" target="_blank" rel="noopener">LinkedIn</a>
-
                 </div>
             </div>
         </section>
