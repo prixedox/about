@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Martin Ševčík — Software Developer · .NET · Python · Azure</title>
+    <meta name="description" content="Mid-to-senior backend developer specializing in pharmaceutical regulatory data systems. C#/.NET, Python, Azure. Open to new roles.">
+    <meta name="author" content="Martin Ševčík">
+    <meta property="og:title" content="Martin Ševčík — Software Developer">
+    <meta property="og:description" content="Backend developer specializing in pharmaceutical regulatory data systems. C#/.NET, Python, Azure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prixedox.github.io/about/">
+    <link rel="icon" href="resumeIcon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand">Martin Ševčík</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.closest('.nav').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Martin Ševčík</h1>
+            <p class="subtitle">Software Developer · .NET · Python · Azure · Pharma Data · AI-augmented workflows</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About</h2>
+                <p>I'm a backend-focused software developer specializing in pharmaceutical regulatory data systems — a rare niche where software reliability directly impacts drug safety and compliance. I build data pipelines, notification systems, and integration layers on .NET, Python, and Azure for regulated environments. Currently working with German pharma market data at Arex, and open to senior-track backend roles (remote or hybrid).</p>
+            </div>
+        </section>
+
+        <section id="stack" class="section section-alt">
+            <div class="container">
+                <h2>Tech Stack</h2>
+                <div class="stack-grid">
+                    <div class="stack-group">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>C# / .NET</li>
+                            <li>Python</li>
+                            <li>Entity Framework Core</li>
+                        </ul>
+                    </div>
+                    <div class="stack-group">
+                        <h3>Cloud</h3>
+                        <ul>
+                            <li>Azure Service Bus</li>
+                            <li>Azure Logic Apps</li>
+                            <li>Azure Functions</li>
+                            <li>Azure AD</li>
+                        </ul>
+                    </div>
+                    <div class="stack-group">
+                        <h3>Data</h3>
+                        <ul>
+                            <li>SQL Server</li>
+                            <li>Data pipelines &amp; scraping</li>
+                            <li>ML (scikit-learn, pandas, numpy)</li>
+                        </ul>
+                    </div>
+                    <div class="stack-group">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>Angular</li>
+                            <li>React / TypeScript</li>
+                        </ul>
+                    </div>
+                    <div class="stack-group">
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Git, Docker</li>
+                            <li>Linux / WSL2</li>
+                            <li>Vim motions</li>
+                        </ul>
+                    </div>
+                    <div class="stack-group">
+                        <h3>AI Workflows</h3>
+                        <ul>
+                            <li>Claude Code (daily driver)</li>
+                            <li>MCP integrations</li>
+                            <li>AI-augmented development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Experience</h2>
+
+                <article class="job">
+                    <div class="job-header">
+                        <h3>Arex Pharma</h3>
+                        <span class="job-meta">Software Developer · Nov 2024 – Present · Remote (German market)</span>
+                    </div>
+                    <p class="job-focus">Pharmaceutical regulatory data systems</p>
+                    <ul>
+                        <li>Designed and shipped an Azure Service Bus + Logic Apps notification pipeline for pharmaceutical export ban events</li>
+                        <li>Built async Python scrapers integrating SÚKL and EMA regulatory data into internal systems</li>
+                        <li>Implemented EF Core bulk operations with audit tracking and nullable FK entity design for compliance traceability</li>
+                    </ul>
+                    <p class="job-stack">C#/.NET, Python, Azure (Service Bus, Logic Apps), SQL Server, EF Core</p>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <h3>Innomotics / Siemens</h3>
+                        <span class="job-meta">Software Developer · Aug 2022 – Oct 2024</span>
+                    </div>
+                    <p class="job-focus">Full-stack manufacturing applications</p>
+                    <ul>
+                        <li>Built the Traceability app — Gantt-based production visualizations, logistical order maps, and legacy data cleanup across four data perspectives</li>
+                        <li>Shipped the Impregnation Station app with Azure AD auth, MQTT + SignalR real-time protocols, and custom recipe adapters for manufacturer specs</li>
+                        <li>Developed an ML-based packaging prediction system: two-service architecture (.NET + Python K-Means model) communicating over HTTP</li>
+                    </ul>
+                    <p class="job-stack">.NET, Angular, Python, SQL Server, Azure AD, MQTT, SignalR</p>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <h3>Liberty Ostrava</h3>
+                        <span class="job-meta">Full-stack Developer · Feb 2019 – Aug 2022 · Contract (during studies)</span>
+                    </div>
+                    <ul>
+                        <li>Built new web applications and modernized legacy frontend systems</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <h3>IDC CEMA</h3>
+                        <span class="job-meta">Data Analyst · Sep 2021 – Dec 2021 · Contract</span>
+                    </div>
+                    <ul>
+                        <li>Built web scraping and automation pipelines for e-commerce product data collection</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <article class="project">
+                        <h3>Pharma Export Ban Pipeline</h3>
+                        <p>Real-time notification system for pharmaceutical export ban events. Azure Service Bus ingests regulatory updates, Logic Apps routes alerts to stakeholders, and a .NET backend persists audit trails for compliance.</p>
+                        <span class="project-stack">C#/.NET · Azure Service Bus · Logic Apps · SQL Server</span>
+                    </article>
+                    <article class="project">
+                        <h3>Traceability</h3>
+                        <p>Manufacturing operations visualization app with Gantt charts across personnel, workplace, machine, and order perspectives. Includes logistical order progression maps and significant legacy data cleanup.</p>
+                        <span class="project-stack">.NET · Angular · SQL Server</span>
+                    </article>
+                    <article class="project">
+                        <h3>Impregnation Station</h3>
+                        <p>Recipe and access management for manufacturing stations. Azure AD authentication, real-time MQTT + SignalR communication, and custom recipe adapters translating manufacturer specifications.</p>
+                        <span class="project-stack">.NET · Angular · Azure AD · MQTT · SignalR</span>
+                    </article>
+                    <article class="project">
+                        <h3>Packaging Prediction</h3>
+                        <p>ML-powered optimal packaging prediction. Two-service architecture: .NET app handles business logic and UI, Python service runs K-Means clustering on item parameters (weight, dimensions) via HTTP API.</p>
+                        <span class="project-stack">.NET · Python · scikit-learn · K-Means</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-list">
+                    <article class="edu">
+                        <h3>M.Sc. Computer Science</h3>
+                        <span class="edu-meta">VŠB – Technical University of Ostrava · 2020 – 2022</span>
+                    </article>
+                    <article class="edu">
+                        <h3>B.Sc. Computer Science</h3>
+                        <span class="edu-meta">VŠB – Technical University of Ostrava · 2017 – 2020</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-links">
+                    <a href="https://github.com/prixedox" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/martin-%C5%A1ev%C4%8D%C3%ADk-947105167/" target="_blank" rel="noopener">LinkedIn</a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section personal">
+            <div class="container">
+                <p class="personal-note">Outside of work — gym, games, and learning kalimba.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Martin Ševčík</p>
+        </div>
+    </footer>
+</body>
+</html>
