@@ -826,6 +826,8 @@
     <div class="gutter mono">
       <span class="num">35</span><span class="num">36</span><span class="num">37</span><span class="num">38</span>
       <span class="num">39</span><span class="num">40</span><span class="num">41</span><span class="num">42</span>
+      <span class="num">43</span><span class="num">44</span><span class="num">45</span><span class="num">46</span>
+      <span class="num">47</span><span class="num">48</span><span class="num">49</span><span class="num">50</span>
     </div>
     <div class="pane">
       <div class="section-head">
@@ -865,46 +867,78 @@
         <div class="pcard">
           <div>
             <div class="headline">
-              <h4>DeepWork</h4>
-              <span class="badge">Public API</span>
+              <h4>Life OS</h4>
+              <span class="badge">MCP · WIP</span>
             </div>
-            <p>Public focus-session tracker — API that logs deep-work sessions, tracks streaks, and exposes weekly and monthly analytics. Real auth flow, rate limiting, full OpenTelemetry tracing, and a public Grafana dashboard showing live request latency and error rates.</p>
+            <p>Personal AI agent with deep memory over my own data — notes, calendar, workouts, reading, habits. Local-first: private vector store, self-hosted, no third-party data sharing. Exposed as both an MCP server (so Claude Code can query it natively) and a standalone CLI agent that calls Claude with tool calling. Aspire-orchestrated local dev with Postgres + pgvector + Ollama; deploys to Azure Container Apps. MVP slice (markdown notes → pgvector → MCP <span class="mono">search_notes</span>) is implemented; eval harness measures recall@k and MRR over a golden-query set.</p>
             <div class="chips">
-              <span class="chip">.NET</span><span class="chip">Postgres</span><span class="chip">OpenTelemetry</span><span class="chip">Grafana</span><span class="chip">Azure Container Apps</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span>
+              <span class="chip">.NET 10</span><span class="chip">MS.Extensions.AI</span><span class="chip">MCP C# SDK</span><span class="chip">Anthropic SDK</span><span class="chip">pgvector</span><span class="chip">Ollama</span><span class="chip">.NET Aspire</span><span class="chip">OpenTelemetry</span><span class="chip">Azure Container Apps</span>
             </div>
+            <a class="glink" href="https://github.com/prixedox/life-os" target="_blank" rel="noopener">
+              github.com/prixedox/life-os <span class="arr">↗</span>
+            </a>
           </div>
           <div class="codecar">
-            <div class="filename"><span>POST /sessions</span><span>· http</span></div>
-            <div class="ln"><span class="n">1</span><span><span class="cm"># start a focus session</span></span></div>
-            <div class="ln"><span class="n">2</span><span><span class="kw">POST</span> /v1/sessions</span></div>
-            <div class="ln"><span class="n">3</span><span>Authorization: Bearer <span class="str">$TOKEN</span></span></div>
-            <div class="ln"><span class="n">4</span><span></span></div>
-            <div class="ln"><span class="n">5</span><span>{</span></div>
-            <div class="ln"><span class="n">6</span><span>  <span class="str">"intent"</span>: <span class="str">"deep work"</span>,</span></div>
-            <div class="ln"><span class="n">7</span><span>  <span class="str">"target_min"</span>: <span class="num">90</span></span></div>
-            <div class="ln"><span class="n">8</span><span>}</span></div>
+            <div class="filename"><span>LifeOs.Mcp/Tools.cs</span><span>· cs</span></div>
+            <div class="ln"><span class="n">1</span><span><span class="kw">[McpServerTool]</span></span></div>
+            <div class="ln"><span class="n">2</span><span><span class="kw">public static async</span> <span class="fn">Task</span>&lt;<span class="kw">string</span>&gt;</span></div>
+            <div class="ln"><span class="n">3</span><span><span class="fn">SearchNotes</span>(<span class="kw">string</span> query,</span></div>
+            <div class="ln"><span class="n">4</span><span>             <span class="kw">int</span> k = <span class="num">8</span>) {</span></div>
+            <div class="ln"><span class="n">5</span><span>  <span class="kw">var</span> v = <span class="kw">await</span> embedder</span></div>
+            <div class="ln"><span class="n">6</span><span>     .<span class="fn">EmbedAsync</span>(query);</span></div>
+            <div class="ln"><span class="n">7</span><span>  <span class="kw">return</span> <span class="kw">await</span> store</span></div>
+            <div class="ln"><span class="n">8</span><span>     .<span class="fn">SearchAsync</span>(v, k);</span></div>
+            <div class="ln"><span class="n">9</span><span>}</span></div>
           </div>
         </div>
 
         <div class="pcard">
           <div>
             <div class="headline">
-              <h4>Personal Life OS</h4>
-              <span class="badge">MCP</span>
+              <h4>Lifeline</h4>
+              <span class="badge">Full-stack</span>
             </div>
-            <p>AI agent with deep memory over my own data — notes, calendar, workouts, reading, habits. Local-first: private vector store, self-hosted, no third-party data sharing. Exposed as an MCP server so Claude Code can query it natively. Every agent run is traced — token cost, latency, and eval scores tracked over time.</p>
+            <p>Full-stack journaling app where every day from your birthday to today is a slot you can fill with text and photos. Three-column Year → Month → Day browser plus an auto-saving writing pane with debounced saves and keyboard shortcuts. Hardened photo handling — strict filename allowlist, path-traversal-safe resolve checks, ownership verification before serving any file. JWT auth with bcrypt, rate-limited auth endpoints, strict CORS, and boot-time secret validation. Zero-install demo path runs an in-memory MongoDB so reviewers can try the app without signup.</p>
             <div class="chips">
-              <span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">MCP SDK</span><span class="chip">pgvector</span><span class="chip">FastAPI</span><span class="chip">OpenTelemetry</span><span class="chip">Docker</span>
+              <span class="chip">Node 20</span><span class="chip">Express 4</span><span class="chip">Mongoose</span><span class="chip">MongoDB</span><span class="chip">JWT</span><span class="chip">bcrypt</span><span class="chip">Multer</span><span class="chip">React 18</span><span class="chip">Vite</span><span class="chip">Tailwind</span>
+            </div>
+            <a class="glink" href="https://github.com/prixedox/lifeline" target="_blank" rel="noopener">
+              github.com/prixedox/lifeline <span class="arr">↗</span>
+            </a>
+          </div>
+          <div class="codecar">
+            <div class="filename"><span>routes/memories.js</span><span>· js</span></div>
+            <div class="ln"><span class="n">1</span><span><span class="cm">// path-traversal safe photo serve</span></span></div>
+            <div class="ln"><span class="n">2</span><span><span class="kw">const</span> name = req.params.filename;</span></div>
+            <div class="ln"><span class="n">3</span><span><span class="kw">if</span> (!<span class="str">/^[\w.\-]+$/</span>.<span class="fn">test</span>(name))</span></div>
+            <div class="ln"><span class="n">4</span><span>  <span class="kw">return</span> res.<span class="fn">sendStatus</span>(<span class="num">400</span>);</span></div>
+            <div class="ln"><span class="n">5</span><span><span class="kw">const</span> p = path.<span class="fn">resolve</span>(dir, name);</span></div>
+            <div class="ln"><span class="n">6</span><span><span class="kw">if</span> (!p.<span class="fn">startsWith</span>(dir))</span></div>
+            <div class="ln"><span class="n">7</span><span>  <span class="kw">return</span> res.<span class="fn">sendStatus</span>(<span class="num">403</span>);</span></div>
+            <div class="ln"><span class="n">8</span><span><span class="kw">await</span> <span class="fn">assertOwnership</span>(req, name);</span></div>
+          </div>
+        </div>
+
+        <div class="pcard">
+          <div>
+            <div class="headline">
+              <h4>Cosmos</h4>
+              <span class="badge">Game · WIP</span>
+            </div>
+            <p>Browser idle game that teaches physics and astronomy by re-enacting humanity's discovery of the universe. Each era unlocks a new game rule grounded in real physics — Newton's gravity literally makes projectiles fall in parabolas, Einstein's relativity desyncs your factory clocks. v1 ships three eras (Prehistoric stargazing → Greek geometry → Copernican models) and three "aha" interactive vignettes — Calendar cycle, Eratosthenes measuring the Earth, and Retrograde-to-heliocentric. Fixed-timestep tick loop, offline progress (capped), localStorage save with versioned schema, no backend.</p>
+            <div class="chips">
+              <span class="chip">TypeScript</span><span class="chip">React 18</span><span class="chip">Vite</span><span class="chip">Zustand</span><span class="chip">Tailwind</span><span class="chip">Vitest</span>
             </div>
           </div>
           <div class="codecar">
-            <div class="filename"><span>mcp_server.py</span><span>· py</span></div>
-            <div class="ln"><span class="n">1</span><span><span class="kw">@server</span>.<span class="fn">tool</span>()</span></div>
-            <div class="ln"><span class="n">2</span><span><span class="kw">async def</span> <span class="fn">recall</span>(query: <span class="kw">str</span>):</span></div>
-            <div class="ln"><span class="n">3</span><span>    hits = <span class="kw">await</span> vec.<span class="fn">search</span>(</span></div>
-            <div class="ln"><span class="n">4</span><span>        query, k=<span class="num">8</span></span></div>
-            <div class="ln"><span class="n">5</span><span>    )</span></div>
-            <div class="ln"><span class="n">6</span><span>    <span class="kw">return</span> <span class="fn">format</span>(hits)</span></div>
+            <div class="filename"><span>game/loop.ts</span><span>· ts</span></div>
+            <div class="ln"><span class="n">1</span><span><span class="cm">// fixed-timestep tick</span></span></div>
+            <div class="ln"><span class="n">2</span><span><span class="kw">const</span> TICK = <span class="num">250</span>;</span></div>
+            <div class="ln"><span class="n">3</span><span><span class="fn">setInterval</span>(() =&gt; {</span></div>
+            <div class="ln"><span class="n">4</span><span>  store.<span class="fn">advance</span>(TICK);</span></div>
+            <div class="ln"><span class="n">5</span><span>  <span class="kw">if</span> (era.<span class="fn">unlocks</span>(<span class="str">"newton"</span>))</span></div>
+            <div class="ln"><span class="n">6</span><span>    physics.gravity = <span class="num">9.81</span>;</span></div>
+            <div class="ln"><span class="n">7</span><span>}, TICK);</span></div>
           </div>
         </div>
 
@@ -915,7 +949,7 @@
   <!-- Education -->
   <section class="section reveal" id="education">
     <div class="gutter mono">
-      <span class="num">43</span><span class="num">44</span><span class="num">45</span><span class="num">46</span>
+      <span class="num">51</span><span class="num">52</span><span class="num">53</span><span class="num">54</span>
     </div>
     <div class="pane">
       <div class="section-head">
@@ -945,7 +979,7 @@
   <!-- Contact -->
   <section class="section reveal" id="contact">
     <div class="gutter mono">
-      <span class="num">47</span><span class="num">48</span><span class="num">49</span><span class="num">50</span>
+      <span class="num">55</span><span class="num">56</span><span class="num">57</span><span class="num">58</span>
     </div>
     <div class="pane">
       <div class="section-head">
