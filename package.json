@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build",
-    "build": "mkdir -p dist && cp index.html style.css resumeIcon.png dist/",
+    "build": "mkdir -p dist && cp index.html resumeIcon.png dist/",
     "start": "python3 -m http.server 3000 || npx serve ."
   },
   "devDependencies": {
