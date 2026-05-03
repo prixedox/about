@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Martin Ševčík — Contractor CV</title>
+<meta name="description" content="Senior backend contractor · .NET / Python / Azure · IČO. Available immediately, remote. From 1,200 CZK/hour.">
+<link rel="icon" href="resumeIcon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg:        #ffffff;
+    --bg-soft:   #fafaf9;
+    --bg-sunk:   #f3f3f1;
+    --line:      #e6e5e1;
+    --line-soft: #efeeea;
+    --fg:        #18181b;
+    --fg-mute:   #5b5b62;
+    --fg-dim:    #8a8a90;
+    --accent:    #1f7a3f;
+    --accent-dim:#3aa763;
+    --page-w:    210mm;
+    --page-h:    297mm;
+    --pad:       8mm;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ececea; }
+  body {
+    color: var(--fg);
+    font: 9.8pt/1.42 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01","cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-feature-settings: "ss02","cv02"; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Page sheet */
+  .sheet {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    background: var(--bg);
+    margin: 24px auto;
+    padding: var(--pad);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.10);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Header */
+  .head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    padding-bottom: 7pt;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 9pt;
+    gap: 12pt;
+  }
+  .name {
+    margin: 0;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 600;
+    font-size: 30pt;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .name .tld { color: var(--accent); }
+  .role {
+    margin-top: 6pt;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10pt;
+    color: var(--fg-mute);
+    display: flex; flex-wrap: wrap; gap: 4pt 12pt;
+  }
+  .role span + span::before {
+    content: "·"; color: var(--fg-dim); margin-right: 6pt;
+  }
+  .rate-badge {
+    display: inline-flex; align-items: center; gap: 6pt;
+    margin-top: 7pt;
+    padding: 3pt 8pt;
+    font-size: 9pt;
+    color: var(--fg);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: 4pt;
+  }
+  .rate-badge b { color: var(--accent); font-weight: 600; }
+  .rate-badge .rdot {
+    width: 6pt; height: 6pt; border-radius: 50%;
+    background: var(--accent);
+  }
+  .contacts {
+    display: grid;
+    gap: 3pt;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 9pt;
+    color: var(--fg-mute);
+    text-align: right;
+  }
+  .contacts a { color: var(--fg); }
+  .contacts .accent { color: var(--accent); }
+
+  /* Summary */
+  .summary {
+    color: var(--fg);
+    font-size: 9.8pt;
+    line-height: 1.42;
+    margin: 0 0 10pt;
+    text-wrap: pretty;
+  }
+  .summary .hl { color: var(--accent); font-weight: 500; }
+
+  /* Section heads */
+  .section {
+    margin-bottom: 9pt;
+  }
+  .section:last-child { margin-bottom: 0; }
+  .sechead {
+    display: flex; align-items: baseline; gap: 10pt;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 9pt;
+    color: var(--fg-dim);
+    margin-bottom: 8pt;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .sechead .id { color: var(--accent); font-weight: 600; }
+  .sechead .title { color: var(--fg); font-weight: 600; letter-spacing: 0.06em; }
+  .sechead .rule { flex: 1; height: 1px; background: var(--line-soft); }
+
+  /* Two-column body */
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+    gap: 16pt;
+  }
+
+  /* Experience */
+  .xp-row {
+    padding: 5pt 0 6pt;
+    border-top: 1px dashed var(--line);
+  }
+  .xp-row:first-child { border-top: 0; padding-top: 0; }
+  .xp-head {
+    display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 10pt;
+    margin-bottom: 0;
+  }
+  .xp-head h3 {
+    margin: 0; font-size: 10.5pt; font-weight: 600; letter-spacing: -0.005em;
+    line-height: 1.2;
+  }
+  .xp-role {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 8.5pt; color: var(--fg-dim); font-weight: 400;
+    margin: 0 0 1pt;
+  }
+  .xp-when {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 8.5pt; color: var(--fg-dim);
+    white-space: nowrap;
+  }
+  .xp-tag { font-size: 9pt; color: var(--fg-mute); margin: 0 0 3pt; font-style: italic; }
+  .xp-row ul { margin: 3pt 0 4pt; padding-left: 13pt; }
+  .xp-row ul li { margin-bottom: 1.5pt; line-height: 1.38; }
+  .xp-row ul li::marker { color: var(--accent-dim); }
+  .stack-line {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 8.5pt; color: var(--fg-dim);
+    margin-top: 3pt;
+  }
+
+  /* Skills — inline label format */
+  .skills { display: grid; gap: 4pt; }
+  .skill-cat {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 8.8pt;
+    line-height: 1.42;
+  }
+  .skill-cat .label {
+    color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-right: 4pt;
+  }
+  .skill-cat .items {
+    color: var(--fg);
+  }
+
+  /* Projects */
+  .proj-row {
+    padding: 5pt 0 6pt;
+    border-top: 1px dashed var(--line);
+  }
+  .proj-row:first-child { border-top: 0; padding-top: 0; }
+  .proj-head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 8pt;
+    margin-bottom: 2pt;
+  }
+  .proj-head h4 { margin: 0; font-size: 10.5pt; font-weight: 600; letter-spacing: -0.005em; }
+  .proj-head .meta {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 8.5pt; color: var(--accent);
+  }
+  .proj-row p { margin: 0 0 3pt; font-size: 9.5pt; color: var(--fg); line-height: 1.4; }
+  .proj-row .stack-line { font-size: 8.5pt; }
+
+  /* Education */
+  .edu-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 10pt; padding: 4pt 0;
+    border-top: 1px dashed var(--line);
+  }
+  .edu-row:first-child { border-top: 0; padding-top: 0; }
+  .edu-row .when {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 9pt; color: var(--fg-dim);
+    white-space: nowrap;
+  }
+  .edu-row .what { font-size: 10pt; }
+  .edu-row .what b { font-weight: 600; }
+  .edu-row .what .where { color: var(--fg-mute); margin-left: 4pt; font-size: 9.5pt; }
+
+  /* Languages / extras inline list */
+  .inline-list {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 9pt;
+    color: var(--fg);
+    display: flex; flex-wrap: wrap; gap: 4pt 16pt;
+  }
+  .inline-list .lk { color: var(--fg-dim); margin-right: 6pt; }
+
+  /* Print */
+  @media print {
+    @page { size: A4; margin: 0; }
+    html, body { background: #fff; }
+    .sheet {
+      box-shadow: none;
+      margin: 0;
+      width: 100%;
+      min-height: auto;
+      padding: var(--pad);
+      overflow: visible;
+    }
+    .grid { break-inside: auto; }
+    .section { break-inside: avoid; }
+    .toolbar { display: none; }
+    a { color: var(--fg); }
+    .contacts a, .contacts .accent { color: var(--fg); }
+  }
+
+  /* Floating print button — hidden by default, only shown on screen */
+  .toolbar { display: none; }
+  @media screen {
+    .toolbar {
+      position: fixed; top: 16px; right: 16px; z-index: 50;
+      display: flex; gap: 8px;
+    }
+    .toolbar button {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      background: var(--fg);
+      color: #fff;
+      border: 0;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    }
+    .toolbar button:hover { background: var(--accent); }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="window.print()">⌘P · Save as PDF</button>
+</div>
+
+<article class="sheet">
+
+  <header class="head">
+    <div>
+      <h1 class="name">Martin Ševčík<span class="tld">.</span></h1>
+      <div class="role mono">
+        <span>Senior Backend Contractor</span>
+        <span>.NET</span>
+        <span>Python</span>
+        <span>Azure</span>
+      </div>
+      <div class="rate-badge mono">
+        <span class="rdot"></span>
+        <span>Available now · Remote · IČO + DIČ · From <b>1,200 CZK/h</b> · 9,500 CZK/day</span>
+      </div>
+    </div>
+    <div class="contacts">
+      <div><a href="mailto:marty.sevcik3@gmail.com" class="accent">marty.sevcik3@gmail.com</a></div>
+      <div><a href="https://prixedox.github.io/about/">prixedox.github.io/about</a></div>
+      <div><a href="https://github.com/prixedox">github.com/prixedox</a></div>
+      <div><a href="https://www.linkedin.com/in/martin-%C5%A1ev%C4%8D%C3%ADk-947105167/">linkedin.com/in/martin-ševčík</a></div>
+      <div>Czech Republic · Remote / Hybrid</div>
+      <div>Czech native · English C1 · German A2</div>
+    </div>
+  </header>
+
+  <p class="summary">
+    Senior backend contractor with <span class="hl">4+ years</span> shipping production-ready data and integration systems on
+    <span class="hl">.NET, Python, and Azure</span> across pharma, manufacturing, and full-stack web. Comfortable embedding
+    into your team for 3–12 month engagements or owning end-to-end delivery of a defined scope. Available 32–40 h / week.
+  </p>
+
+  <div class="grid">
+
+    <!-- LEFT column: experience + projects -->
+    <div>
+
+      <section class="section">
+        <div class="sechead">
+          <span class="id">// 01</span><span class="title">Experience</span><span class="rule"></span>
+        </div>
+
+        <div class="xp-row">
+          <div class="xp-head">
+            <h3>Arex Pharma</h3>
+            <div class="xp-when">Nov 2024 — Present · Remote</div>
+          </div>
+          <div class="xp-role">Software Developer</div>
+          <div class="xp-tag">Pharmaceutical regulatory data systems for the German market.</div>
+          <ul>
+            <li>Owned end-to-end design and delivery of an Azure Service Bus + Logic Apps notification pipeline for pharmaceutical export-ban events.</li>
+            <li>Shipped async Python scrapers integrating SÚKL and EMA regulatory data into internal .NET systems.</li>
+            <li>Built a cross-border pharmaceutical data hub integrating EU national drug registries and pricing into a unified warehouse to enable intra-EU trading.</li>
+          </ul>
+          <div class="stack-line">C# · .NET · Python · Azure (Service Bus, Logic Apps, Functions, AD) · SQL Server · EF Core</div>
+        </div>
+
+        <div class="xp-row">
+          <div class="xp-head">
+            <h3>Innomotics / Siemens</h3>
+            <div class="xp-when">Aug 2022 — Oct 2024 · On-site</div>
+          </div>
+          <div class="xp-role">Software Developer</div>
+          <div class="xp-tag">Full-stack manufacturing applications.</div>
+          <ul>
+            <li>Built the Traceability app — Gantt-based production visualizations and logistical order maps across four data perspectives, with significant legacy data cleanup.</li>
+            <li>Shipped the Impregnation Station app with Azure AD auth, MQTT + SignalR real-time protocols, and custom recipe adapters for manufacturer specs.</li>
+            <li>Developed an ML-based packaging prediction system as a two-service architecture (.NET + Python K-Means) communicating over HTTP.</li>
+          </ul>
+          <div class="stack-line">.NET · Angular · Python · SQL Server · Azure AD · MQTT · SignalR · scikit-learn</div>
+        </div>
+
+        <div class="xp-row">
+          <div class="xp-head">
+            <h3>Liberty Ostrava</h3>
+            <div class="xp-when">Feb 2019 — Aug 2022 · Contract</div>
+          </div>
+          <div class="xp-role">Full-stack Developer</div>
+          <div class="xp-tag">Web applications and modernization of legacy frontends during studies. .NET · JS · SQL Server.</div>
+        </div>
+
+        <div class="xp-row">
+          <div class="xp-head">
+            <h3>IDC CEMA</h3>
+            <div class="xp-when">Sep 2021 — Dec 2021 · Contract</div>
+          </div>
+          <div class="xp-role">Data Analyst</div>
+          <div class="xp-tag">Web scraping and automation pipelines for e-commerce product data. Python · pandas.</div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT column: skills + education + extras -->
+    <div>
+
+      <section class="section">
+        <div class="sechead">
+          <span class="id">// 03</span><span class="title">Stack</span><span class="rule"></span>
+        </div>
+        <div class="skills">
+          <div class="skill-cat"><span class="label">Backend</span><span class="items">C# / .NET, Python, EF Core</span></div>
+          <div class="skill-cat"><span class="label">Azure</span><span class="items">Service Bus, Logic Apps, Functions, AD, Container Apps</span></div>
+          <div class="skill-cat"><span class="label">Data</span><span class="items">SQL Server, MongoDB, pgvector, pandas, scikit-learn</span></div>
+          <div class="skill-cat"><span class="label">Realtime / Integration</span><span class="items">MQTT, SignalR, MCP, MS Graph</span></div>
+          <div class="skill-cat"><span class="label">Frontend</span><span class="items">Angular, React / TypeScript, Next.js, Tailwind</span></div>
+          <div class="skill-cat"><span class="label">Tools</span><span class="items">Git, Docker, Linux / WSL2, OpenTelemetry, .NET Aspire</span></div>
+          <div class="skill-cat"><span class="label">AI</span><span class="items">Claude Code, MCP integrations, AI-augmented dev</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sechead">
+          <span class="id">// 02</span><span class="title">Selected Projects</span><span class="rule"></span>
+        </div>
+
+        <div class="proj-row">
+          <div class="proj-head">
+            <h4>Life OS</h4>
+            <span class="meta mono">.NET 10 · MCP · pgvector</span>
+          </div>
+          <p>Demonstrates: end-to-end agent / MCP system design, vector retrieval, eval harness, Aspire-orchestrated infra, Azure deploy. Personal AI agent with deep memory over private data — exposed as both an MCP server and a standalone CLI calling Claude with tool use.</p>
+          <div class="stack-line">.NET 10 · MCP C# SDK · Anthropic SDK · pgvector · .NET Aspire</div>
+        </div>
+
+        <div class="proj-row">
+          <div class="proj-head">
+            <h4>Vzdělej.se</h4>
+            <span class="meta mono">Next.js · Live</span>
+          </div>
+          <p>Czech interactive learning platform for math &amp; physics. Lessons mix multiple-choice, drag-to-sort, text input, and custom interactive visualizations (function graphs, physics simulations).</p>
+          <div class="stack-line">Next.js 16 · React 19 · TypeScript · Tailwind · KaTeX</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sechead">
+          <span class="id">// 04</span><span class="title">Education</span><span class="rule"></span>
+        </div>
+        <div class="edu-row">
+          <div class="what">
+            <b>M.Sc. Computer Science</b><br>
+            <span class="where">VŠB–TU Ostrava</span>
+          </div>
+          <div class="when">2020 — 2022</div>
+        </div>
+        <div class="edu-row">
+          <div class="what">
+            <b>B.Sc. Computer Science</b><br>
+            <span class="where">VŠB–TU Ostrava</span>
+          </div>
+          <div class="when">2017 — 2020</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</article>
+
+</body>
+</html>
